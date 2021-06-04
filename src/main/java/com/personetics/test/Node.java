@@ -5,6 +5,9 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Class to set the Node structure.
+ */
 public class Node {
     private Object value;
 
@@ -20,6 +23,9 @@ public class Node {
         return value;
     }
 
+    /**
+     * Function to get all dependencies of this Node.
+     */
     public ArrayList<String> getDependencies() {
         ArrayList<String> itemsFromValue = new ArrayList<String>(Arrays.asList(this.getValue().toString().split("")));
 

@@ -3,8 +3,14 @@ package com.personetics.test;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class to validate the Chain.
+ */
 public class ChainValidator {
-
+    /**
+     * Validate the chain.
+     * @param nodes The chain to be validated.
+     */
     boolean validate(List<Node> nodes) {
 
         List<String> items = new ArrayList<String>();
@@ -12,7 +18,7 @@ public class ChainValidator {
         ArrayList<ArrayList<String>> dependencies = new ArrayList<ArrayList<String>>();
 
         /* Iterating nodes to get value and dependencies */
-        nodes.forEach((node) -> {
+        nodes.forEach(node -> {
             items.add(node.getValue().toString());
 
             ArrayList<String> nodeDependencies = node.getDependencies();

@@ -4,10 +4,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * Unit test for simple App.
  */
@@ -16,11 +12,12 @@ class AppTest {
 
     @Test
     void testChainOne() {
-        List<Integer> numbers = Arrays.asList(35, 5, 65, 6, 24, 4);
+        java.util.List<Integer> numbers = java.util.Arrays.asList(Integer.parseInt("35"), Integer.parseInt("5"),
+                Integer.parseInt("65"), Integer.parseInt("6"), Integer.parseInt("24"), Integer.parseInt("4"));
 
-        List<Node> nodes = new ArrayList<Node>();
+        java.util.List<Node> nodes = new java.util.ArrayList<Node>();
 
-        numbers.forEach((n) -> {
+        numbers.forEach(n -> {
             Node node = new Node(n);
             nodes.add(node);
         });
@@ -30,10 +27,12 @@ class AppTest {
 
     @Test
     void testChainTwo() {
-        List<Integer> numbers = Arrays.asList(36, 6, 24, 4, 47, 7, 2, 3, 27);
-        List<Node> nodes = new ArrayList<Node>();
+        java.util.List<Integer> numbers = java.util.Arrays.asList(Integer.parseInt("36"), Integer.parseInt("6"),
+                Integer.parseInt("24"), Integer.parseInt("4"), Integer.parseInt("47"), Integer.parseInt("7"),
+                Integer.parseInt("2"), Integer.parseInt("3"), Integer.parseInt("27"));
+        java.util.List<Node> nodes = new java.util.ArrayList<Node>();
 
-        numbers.forEach((n) -> {
+        numbers.forEach(n -> {
             Node node = new Node(n);
             nodes.add(node);
         });
@@ -43,10 +42,10 @@ class AppTest {
 
     @Test
     void testChainThree() {
-        List<String> strings = Arrays.asList("p", "aba", "a", "b", "perso", "o", "r", "e", "s");
-        List<Node> nodes = new ArrayList<Node>();
+        java.util.List<String> strings = java.util.Arrays.asList("p", "aba", "a", "b", "perso", "o", "r", "e", "s");
+        java.util.List<Node> nodes = new java.util.ArrayList<Node>();
 
-        strings.forEach((n) -> {
+        strings.forEach(n -> {
             Node node = new Node(n);
             nodes.add(node);
         });
