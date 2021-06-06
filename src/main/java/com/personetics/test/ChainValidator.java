@@ -21,9 +21,12 @@ public class ChainValidator {
         nodes.forEach(node -> {
             items.add(node.getValue().toString());
 
-            ArrayList<String> nodeDependencies = node.getDependencies();
+            List<String> nodeDependencies = node.getDependencies();
 
             if (nodeDependencies.size() > 1) {
+
+                // remove all itens from dependencies
+                nodeDependencies.removeAll(dependencies);
 
                 dependencies.addAll(nodeDependencies);
             }
